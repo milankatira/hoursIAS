@@ -5,7 +5,6 @@
   "main": "index.js",
   "scripts": {
     "test": "export ENV=test && jest --coverage",
-    "seed": "ts-node-dev --respawn --pretty --transpile-only seed/index",
     "format": "npm run format:write && npm run lint:fix",
     "check": "npm run format:check && npm run lint:check",
     "format:check": "prettier --check .",

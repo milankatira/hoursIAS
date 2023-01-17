@@ -7,6 +7,7 @@ import myfilmdownloadRoutes from './download/films/films.routes';
 import myseriesdownloadRoutes from './download/series/series.routes';
 import mylistRoutes from './myList/common/mylist.routes';
 import downloadRoutes from './download/common/download.routes';
+import pdfRoutes from './pdf/pdf.routes';
 export const Routes = [
   UserRoutes,
   appDataRoutes,
@@ -17,4 +18,5 @@ export const Routes = [
   ProviderRoutes,
   mylistRoutes,
   downloadRoutes,
+  pdfRoutes,
 ];

@@ -2,7 +2,6 @@ import request from 'supertest';
 
 import app from '../../../app';
 import { routePath } from '../../../constant/routes';
-import { seed } from '../../../seed';
 import { getappData } from '../../../src/appdata/appdata.helper';
 
 describe('get app data', () => {

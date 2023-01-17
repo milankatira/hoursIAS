@@ -19,4 +19,8 @@ export const response = {
   addDownload: 'download added successfully',
   updateDownload: 'download updated successfully',
   deleteDownload: 'download deleted successfully',
+
+  addPdf: "pdf added successfully",
+  fetchPdf: "pdf fetch successfully",
+  deletePdf: "pdf deleted successfully",
 };
