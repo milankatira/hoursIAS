@@ -13,7 +13,11 @@ const PdfSchema = new Schema(
       ref: 'User',
       required: true,
     },
-    availablePage: {
+    availablePageFrom: {
+      type: Number,
+      required: true,
+    },
+    availablePageTo: {
       type: Number,
       required: true,
     },
