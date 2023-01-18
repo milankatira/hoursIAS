@@ -24,6 +24,9 @@ dotenv.config();
 const PORT: number = parseInt(process.env.PORT as string, 10);
 
 const app = express();
+// eslint-disable-next-line @typescript-eslint/ban-ts-comment
+// @ts-ignore
+global.__basedir = __dirname;
 app.use(helmet());
 app.use(morgan('dev'));
 app.use(cors());

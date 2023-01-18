@@ -1,3 +1,4 @@
+import { movePdfToInUsersPdfFolder } from './../../utils/attachment';
 import { errorHandler } from './../../utils/errorHandler';
 import { findOneAndDelete, getPdf, addPdf } from './pdf.helper';
 
@@ -29,10 +30,11 @@ export const deletePdfService = async (query: object) => {
 
 };
 
-export const addPdfService = async (payload: any) => {
+export const addPdfService = async (user: string, payload: any) => {
 
   try {
 
+    await movePdfToInUsersPdfFolder(payload.user,user);
     return await addPdf(payload);
 
   } catch (error) {

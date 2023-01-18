@@ -4,6 +4,7 @@ const masterConfig = {
   local: {
     clientUrl: 'http://localhost:3000/',
     serverUrl: 'http://localhost:5000/api/v1',
+    mongoUrl: 'mongodb://localhost:27017/revolt-dtc',
   },
   staging: {
     serverUrl: 'https://revolttv-api.revoltcreator.com/api/v1',
