@@ -4,20 +4,17 @@ import { addPdfService, deletePdfService, getPdfService } from './pdf.service';
 
 export const addPdfControllers = async (req: any, res: Response) => {
   try {
-    // const { resume } = req.files;
     console.log(req.files.pdf[0]);
-    // const data = await uploadFileMiddleware(req, res);
-    // console.log(resume, 'data');
-    // const { image } = req.files;
-    console.log(req.file, 'body');
-    // const { resume } = req.files;
-    // console.log(resume, 'resume');
     const userId = '63638b1e3766cce7b2cf725a';
-    // const result = await addPdfService(userId,req.body);
+    const payload = {
+      ...req.body,
+      fileName: `/resources/static/assets/uploads/${req.files.pdf[0].filename}`,
+    };
+    const result = await addPdfService(userId, payload);
     return res.status(200).json({
       status: true,
       message: response.addPdf,
-      // result,
+      result,
     });
   } catch (error) {
     console.log('errr', error);

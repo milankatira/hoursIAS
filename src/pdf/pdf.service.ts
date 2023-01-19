@@ -34,7 +34,7 @@ export const addPdfService = async (user: string, payload: any) => {
 
   try {
 
-    await movePdfToInUsersPdfFolder(payload.user,user);
+    // await movePdfToInUsersPdfFolder(payload.user,user);
     return await addPdf(payload);
 
   } catch (error) {

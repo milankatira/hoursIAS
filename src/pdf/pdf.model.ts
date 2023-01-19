@@ -6,20 +6,20 @@ const PdfSchema = new Schema(
   {
     fileName: {
       type: String,
-      required: true,
+      // required: true,
     },
     uploadedBy: {
       type: Schema.Types.ObjectId,
       ref: 'User',
-      required: true,
+      // required: true,
     },
     availablePageFrom: {
       type: Number,
-      required: true,
+      // required: true,
     },
     availablePageTo: {
       type: Number,
-      required: true,
+      // required: true,
     },
   },
   { timestamps: true },

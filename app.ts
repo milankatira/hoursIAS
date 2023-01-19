@@ -34,6 +34,7 @@ app.use(express.json());
 app.use('/api/v1/', Routes);
 app.use(express.static('public'));
 app.use('/api/v1/static', express.static(`${__dirname}/static`));
+app.use('/api/v1/resources', express.static(`${__dirname}/resources`));
 
 app.listen(process.env.ENV !== 'test' ? PORT : 0, async () => {
 
