@@ -1,3 +1,4 @@
+import { string } from '@hapi/joi';
 import mongoose from 'mongoose';
 
 const Schema = mongoose.Schema;
@@ -13,14 +14,20 @@ const PdfSchema = new Schema(
       ref: 'User',
       // required: true,
     },
-    availablePageFrom: {
-      type: Number,
-      // required: true,
-    },
-    availablePageTo: {
-      type: Number,
-      // required: true,
-    },
+    bookMark: [{
+      name: {
+        type: String,
+      },
+      availablePageFrom: {
+        type: String,
+        // required: true,
+      },
+      availablePageTo: {
+        type: String,
+        // required: true,
+      },
+    }],
+
   },
   { timestamps: true },
 );

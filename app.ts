@@ -31,6 +31,8 @@ app.use(helmet());
 app.use(morgan('dev'));
 app.use(cors());
 app.use(express.json());
+app.use(express.urlencoded({ extended: false }));
+
 app.use('/api/v1/', Routes);
 app.use(express.static('public'));
 app.use('/api/v1/static', express.static(`${__dirname}/static`));

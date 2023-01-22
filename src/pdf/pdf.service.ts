@@ -34,6 +34,7 @@ export const addPdfService = async (user: string, payload: any) => {
 
   try {
 
+    console.log(payload, 'rrrpayload');
     // await movePdfToInUsersPdfFolder(payload.user,user);
     return await addPdf(payload);
 
